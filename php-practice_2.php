@@ -1,18 +1,18 @@
 <?php
 // Q1 tic-tac問題
 for ($number = 1; $number < 100; $number++ ){
-  if ($number % 4 ==0 && number % 5 == 0 ){
+  if ($number % 4 ==0 && $number % 5 == 0 ){
     //5の倍数かつ4の倍数の時はtictacと出力
-    echo tic-tac. "\n";
+    echo "tic-tac". "\n";
   } elseif ($number % 4 == 0 ){
     //4の倍数の時はticと出力
-    echo tic. "\n";
+    echo "tic". "\n";
   }elseif ($number % 5 == 0) {
     //5の倍数の時はtacと出力
-    echo tac. "\n";
+    echo "tac". "\n";
   } else {
     //数字を出力
-    echo "$number";
+    echo $number."\n";
   }
 }
 
@@ -63,20 +63,8 @@ $personalInfos = [
 ];
 
 foreach ($personalInfos as $person) {
-  if ($person['name'] === 'Aさん') {
-    // Aさんの電話番号は09011112222です。
-      echo "{$person['name']}の電話番号は{$person['tel']}です。\n";
-  }
-  elseif ($person['name'] === 'Bさん') {
-    // Q3 Bさんの電話番号は08033334444です。
-      echo "{$person['name']}の電話番号は{$person['tel']}です。\n";
-  }
-  elseif ($person['name'] === 'Cさん') {
-    // Cさんの電話番号は55556666です。
-      echo "{$person['name']}の電話番号は{$person['tel']}です。\n";
-  }
+  echo "{$person['name']}の電話番号は{$person['tel']}です。\n";
 }
-
 
 $personalInfos = [
   [

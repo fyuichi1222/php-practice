@@ -11,8 +11,8 @@ $result = $num / 2;
 echo $result   . "\n";
 
 // Q3 日付操作
-$time = date("2019年05月23日 14時48分22秒");
-echo $time . "です。";
+$time = strtotime("2019年05月23日 14時48分22秒");
+echo date("Y年m月d日 H時i分s秒", $time);
 
 
 // Q4 条件分岐-1 if文
