@@ -11,7 +11,8 @@ $result = $num / 2;
 echo $result   . "\n";
 
 // Q3 日付操作
-$time = date("Y年m月d日 H時i分s秒");
+$time = date("2019年05月23日 14時48分22秒");
+echo $time . "です。";
 
 
 // Q4 条件分岐-1 if文
@@ -19,12 +20,13 @@ $device='windows';
 
 if ($device == 'windows') {
   echo '使用OSは、windowsです。';
-} elseif ($device == 'mac') {
+} else {
+  if ($device == 'mac') {
     echo '使用OSは、macです。';
 } else {
     echo 'どちらでもありません。';
+  }
 }
-
 // Q5 条件分岐-2 三項演算子
 $age = 10;
 $message = ($age >= 18) ? '成人です。' : '未成年です。';
@@ -35,7 +37,7 @@ echo $message;
 $japan = ['東京都','埼玉県','栃木県','千葉県','神奈川県','茨城県','群馬'];
 $kanto3 = $japan[3];
 $kanto4 = $japan[4];
-echo $kanto3 . "と" . $kanto4 . "は関東地方の都道府県です。";
+echo $japan[3] . "と" . $japan[4] . "は関東地方の都道府県です。";
 
 
 // Q7 連想配列-1
@@ -64,9 +66,9 @@ $kanto_city = [
   "茨城県" => "水戸市"
 ];
 
-if (array("埼玉県", $kanto_city)) {
+
   echo "埼玉県の県庁所在地は、" . $kanto_city["埼玉県"] . "です。";
-}
+
 
 
 // Q9 連想配列-3
@@ -100,7 +102,7 @@ echo hello("安藤") . "\n";
 
 // Q11 関数-2
 function calcTaxInPrice($price) {
-  $taxInPrice = $price * 1.1;
+  return $price * 1.1;;
   return $taxInPrice;
 }
   $price = 1000;
